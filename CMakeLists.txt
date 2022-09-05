@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 
 project(littleFS)
 
-file(GLOB littlefsSrcs *.c)
-add_library(littleFS ${littlefsSrcs})
+add_library(littleFS 
+    lfs.c
+    lfs_util.c
+)
 
 target_include_directories(littleFS PUBLIC .)
